@@ -66,19 +66,19 @@ footer {
 .about-container {
   display: flex;
   align-items: flex-start;
-  gap: 30px;
+  gap: 20px;
 }
 
 .about-image img {
-  width: 350px;
+  width: 250px;   /* reduzida para não ficar enorme */
   height: auto;
-  border-radius: 8px;
+  border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .about-text {
   flex: 1;
-  font-size: 1.1em;
+  font-size: 1.05em;
   line-height: 1.6;
 }
 
@@ -106,6 +106,4 @@ footer {
 .carousel button {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  color: #fff;
+  transform: translateY(-50
