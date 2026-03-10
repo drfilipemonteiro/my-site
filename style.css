@@ -70,7 +70,7 @@ footer {
 }
 
 .about-image img {
-  width: 250px;   /* reduzida para não ficar enorme */
+  width: 200px;   /* menor para não ficar enorme */
   height: auto;
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -80,6 +80,7 @@ footer {
   flex: 1;
   font-size: 1.05em;
   line-height: 1.6;
+  text-align: justify; /* texto justificado */
 }
 
 /* Carrossel */
@@ -104,6 +105,3 @@ footer {
 }
 
 .carousel button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50
