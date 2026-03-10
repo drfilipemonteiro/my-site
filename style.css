@@ -73,17 +73,17 @@ footer {
 }
 
 .about-image img {
-  width: 400px;   /* menor para não ficar enorme */
+  width: 250px;   /* mantém a foto menor */
   height: auto;
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .about-text {
-  flex: 1;
+  flex: 2;              /* aumenta a proporção do texto */
   font-size: 1.05em;
   line-height: 1.6;
-  text-align: justify; /* texto justificado */
+  text-align: justify;
 }
 
 /* Carrossel */
