@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Dr. Filipe Monteiro</title>
+  <!-- Importando fontes do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +14,7 @@
   </header>
 
   <nav>
-    <a href="#about">About</a>
+    <a href="#about">About Me</a>
     <a href="#research">Research</a>
     <a href="#publications">Publications</a>
     <a href="#talks">Talks</a>
@@ -20,14 +22,44 @@
     <a href="#contact">Contact</a>
   </nav>
 
+  <!-- Página principal: About Me -->
   <section id="about">
-    <h2>About</h2>
-    <p>I am a researcher working with photometry and polarimetry observations of asteroids and binary systems.</p>
+    <h2>About Me</h2>
+    <img src="filipeastro.jpg" alt="Dr. Filipe Monteiro" class="profile-pic">
+    <p>Hello! I am a researcher at Observatório Nacional, Brazil, focusing on the physical and dynamical properties of small Solar System bodies. My work includes photometry and polarimetry of asteroids, the origin and evolution of near-Earth objects, the physical characterization and formation of binary asteroids, and asteroid mineralogy in relation to meteorites. </p>
+
+<p>I am part of the Grupo de Ciências Planetárias and the IMPACTON project team, conducting observations at the Observatório Astronômico do Sertão de Itaparica (OASI). I hold a degree in Physics from the Universidade Federal Rural de Pernambuco (UFRPE) and a master’s and doctorate in Astronomy from the Observatório Nacional (ON). </p>
+
+<p>I have worked as a postdoctoral fellow with the Programa de Capacitação Institucional (PCI/ON) and as a FAPERJ Nota 10 postdoctoral fellow at ON. In late 2024, I joined the Laboratório Nacional de Astrofísica (LNA/MCTI), contributing to the development of the SPARC4 instrument pipeline. In 2023, I was honored by the International Astronomical Union (IAU) with the naming of asteroid (34586) Filipemonteiro. In 2025, I continued my postdoctoral research at Universidade Estadual Paulista (UNESP).</p>
+
+<p>I am a member of the Sociedade Astronômica Brasileira (SAB) and the International Astronomical Union (IAU). </p>
+
+    <h3>Research Topics</h3>
+    <ul>
+      <li>Asteroid characterization</li>
+      <li>Binary systems photometry</li>
+      <li>Polarimetric studies</li>
+    </ul>
+
+    <h3>Workplace</h3>
+    <p>Observatório Nacional, Rio de Janeiro, Brazil</p>
+
+    <!-- Carrossel de fotos -->
+    <div class="carousel">
+      <div class="carousel-images">
+        <img src="foto1.jpg" alt="Research 1">
+        <img src="foto2.jpg" alt="Research 2">
+        <img src="foto3.jpg" alt="Research 3">
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
   </section>
 
+  <!-- Outras abas -->
   <section id="research">
     <h2>Research</h2>
-    <p>My work focuses on asteroid characterization using photometric and polarimetric techniques, with observations from OPD telescopes and the IMPACTON project.</p>
+    <p>Details about ongoing projects and collaborations...</p>
   </section>
 
   <section id="publications">
@@ -48,7 +80,6 @@
 
   <section id="cv">
     <h2>Curriculum Vitae</h2>
-    <p>You can download my CV here:</p>
     <p><a href="cv.pdf" target="_blank">Download CV (PDF)</a></p>
   </section>
 
@@ -61,5 +92,32 @@
   <footer>
     <p>&copy; 2026 Dr. Filipe Monteiro</p>
   </footer>
+
+  <!-- Script do carrossel -->
+  <script>
+    const images = document.querySelector('.carousel-images');
+    const totalImages = images.children.length;
+    let index = 0;
+
+    function showImage(i) {
+      images.style.transform = `translateX(-${i * 100}%)`;
+    }
+
+    document.querySelector('.next').addEventListener('click', () => {
+      index = (index + 1) % totalImages;
+      showImage(index);
+    });
+
+    document.querySelector('.prev').addEventListener('click', () => {
+      index = (index - 1 + totalImages) % totalImages;
+      showImage(index);
+    });
+
+    // Rotação automática
+    setInterval(() => {
+      index = (index + 1) % totalImages;
+      showImage(index);
+    }, 5000);
+  </script>
 </body>
 </html>
