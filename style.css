@@ -4,11 +4,9 @@ body {
   line-height: 1.6;
   background: #f9f9f9;
   color: #333;
-
-  /* margens laterais de 2cm */
-  margin-left: 4cm;
-  margin-right: 4cm;
 }
+
+.content { margin-left: 2cm; margin-right: 2cm; }
 
 
 header {
