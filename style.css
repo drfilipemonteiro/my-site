@@ -9,7 +9,7 @@ body {
 header {
   background: #2c3e50;
   color: #fff;
-  padding: 100px;
+  padding: 40px;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
 }
@@ -70,7 +70,7 @@ footer {
 }
 
 .about-image img {
-  width: 200px;   /* menor para não ficar enorme */
+  width: 300px;   /* menor para não ficar enorme */
   height: auto;
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
