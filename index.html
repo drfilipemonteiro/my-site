@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Dr. Filipe Monteiro</title>
-  <!-- Importando fontes do Google Fonts -->
+  <!-- Fontes elegantes -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -14,37 +14,30 @@
   </header>
 
   <nav>
-    <a href="#about">About Me</a>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#talks">Talks</a>
-    <a href="#cv">Curriculum Vitae</a>
-    <a href="#contact">Contact</a>
+    <a href="#about" onclick="showSection('about')">About Me</a>
+    <a href="#research" onclick="showSection('research')">Research</a>
+    <a href="#publications" onclick="showSection('publications')">Publications</a>
+    <a href="#talks" onclick="showSection('talks')">Talks</a>
+    <a href="#cv" onclick="showSection('cv')">Curriculum Vitae</a>
+    <a href="#contact" onclick="showSection('contact')">Contact</a>
   </nav>
 
-  <!-- Página principal: About Me -->
-  <section id="about">
-    <h2>About Me</h2>
-    <img src="filipeastro.jpg" alt="Dr. Filipe Monteiro" class="profile-pic">
-    <p>Hello! I am a researcher at Observatório Nacional, Brazil, focusing on the physical and dynamical properties of small Solar System bodies. My work includes photometry and polarimetry of asteroids, the origin and evolution of near-Earth objects, the physical characterization and formation of binary asteroids, and asteroid mineralogy in relation to meteorites. </p>
+  <!-- Seções -->
+  <section id="about" class="about-section">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="filipeastro.jpg" alt="Dr. Filipe Monteiro">
+      </div>
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>Hello! I am a researcher at Observatório Nacional, Brazil, mainly in the following topics: physical and dynamical properties of small Solar System bodies; photometry and polarimetry of small bodies; origin and evolution of near-Earth asteroids; physical characterization and formation of binary asteroids; and asteroid mineralogy and its correspondence with meteorites.</p>
+        <p>I am part of the Grupo de Ciências Planetárias and the IMPACTON project team, performing observations at the Observatório Astronômico do Sertão de Itaparica (OASI). Previously, I obtained a degree in Physics from the Universidade Federal Rural de Pernambuco (UFRPE) and a master's and doctorate in Astronomy from the Observatório Nacional (ON).</p>
+        <p>I was a postdoctoral fellow with the Programa de Capacitação Institucional (PCI/ON) and a FAPERJ Nota 10 postdoctoral fellow at ON. At the end of 2024, I worked as a postdoctoral researcher at the Laboratório Nacional de Astrofísica (LNA/MCTI), contributing to the development team of the SPARC4 instrument pipeline. In 2023, I was honored by the International Astronomical Union (IAU) with the naming of asteroid <strong>(34586) Filipemonteiro</strong>. In 2025, I was a postdoctoral researcher at the Universidade Estadual Paulista (UNESP).</p>
+        <p>I am a member of the Sociedade Astronômica Brasileira (SAB) and the International Astronomical Union (IAU).</p>
+      </div>
+    </div>
 
-<p>I am part of the Grupo de Ciências Planetárias and the IMPACTON project team, conducting observations at the Observatório Astronômico do Sertão de Itaparica (OASI). I hold a degree in Physics from the Universidade Federal Rural de Pernambuco (UFRPE) and a master’s and doctorate in Astronomy from the Observatório Nacional (ON). </p>
-
-<p>I have worked as a postdoctoral fellow with the Programa de Capacitação Institucional (PCI/ON) and as a FAPERJ Nota 10 postdoctoral fellow at ON. In late 2024, I joined the Laboratório Nacional de Astrofísica (LNA/MCTI), contributing to the development of the SPARC4 instrument pipeline. In 2023, I was honored by the International Astronomical Union (IAU) with the naming of asteroid (34586) Filipemonteiro. In 2025, I continued my postdoctoral research at Universidade Estadual Paulista (UNESP).</p>
-
-<p>I am a member of the Sociedade Astronômica Brasileira (SAB) and the International Astronomical Union (IAU). </p>
-
-    <h3>Research Topics</h3>
-    <ul>
-      <li>Asteroid characterization</li>
-      <li>Binary systems photometry</li>
-      <li>Polarimetric studies</li>
-    </ul>
-
-    <h3>Workplace</h3>
-    <p>Observatório Nacional, Rio de Janeiro, Brazil</p>
-
-    <!-- Carrossel de fotos -->
+    <!-- Carrossel -->
     <div class="carousel">
       <div class="carousel-images">
         <img src="foto1.jpg" alt="Research 1">
@@ -56,13 +49,12 @@
     </div>
   </section>
 
-  <!-- Outras abas -->
-  <section id="research">
+  <section id="research" class="hidden">
     <h2>Research</h2>
     <p>Details about ongoing projects and collaborations...</p>
   </section>
 
-  <section id="publications">
+  <section id="publications" class="hidden">
     <h2>Publications</h2>
     <ul>
       <li>Monteiro, F. et al. (2025). Polarimetric studies of Z-type asteroids. <em>Astronomy Journal</em>.</li>
@@ -70,7 +62,7 @@
     </ul>
   </section>
 
-  <section id="talks">
+  <section id="talks" class="hidden">
     <h2>Talks</h2>
     <ul>
       <li>“Asteroid Polarimetry in Brazil” – Observatório Nacional Colloquium, 2025</li>
@@ -78,12 +70,12 @@
     </ul>
   </section>
 
-  <section id="cv">
+  <section id="cv" class="hidden">
     <h2>Curriculum Vitae</h2>
     <p><a href="cv.pdf" target="_blank">Download CV (PDF)</a></p>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="hidden">
     <h2>Contact</h2>
     <p>Email: filipeastro@on.br</p>
     <p>GitHub: <a href="https://github.com/drfilipemonteiro">github.com/drfilipemonteiro</a></p>
@@ -93,8 +85,16 @@
     <p>&copy; 2026 Dr. Filipe Monteiro</p>
   </footer>
 
-  <!-- Script do carrossel -->
+  <!-- Script -->
   <script>
+    function showSection(sectionId) {
+      document.querySelectorAll("section").forEach(sec => {
+        sec.classList.add("hidden");
+      });
+      document.getElementById(sectionId).classList.remove("hidden");
+    }
+
+    // Carrossel
     const images = document.querySelector('.carousel-images');
     const totalImages = images.children.length;
     let index = 0;
@@ -113,7 +113,6 @@
       showImage(index);
     });
 
-    // Rotação automática
     setInterval(() => {
       index = (index + 1) % totalImages;
       showImage(index);
