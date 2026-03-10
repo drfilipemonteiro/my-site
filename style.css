@@ -69,12 +69,7 @@ footer {
   gap: 20px;
 }
 
-.about-image img {
-  width: 400px;   /* menor para não ficar enorme */
-  height: auto;
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
+.about-image img { width: 100%; height: auto; }
 
 .about-text {
   flex: 1;
