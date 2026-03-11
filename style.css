@@ -129,7 +129,7 @@ footer {
 }
 
 .gallery-container img {
-  width: 180px;
+  width: 100px;
   height: auto;
   border-radius: 6px;
   cursor: pointer;
