@@ -129,11 +129,8 @@ footer {
 }
 
 .gallery-container img {
-  width: 50% !important;
+  width: 80px;   /* diminui o tamanho das miniaturas */
   height: auto;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: transform 0.3s;
 }
 
 .gallery-container img:hover {
