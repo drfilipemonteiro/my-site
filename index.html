@@ -187,77 +187,12 @@
     
   <h3>Orbit Simulation</h3>
   <p>Interactive orbital simulation of asteroid 34586 Filipemonteiro:</p>
-<div id="orbit-simulation"></div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script>
-  // Cena, câmera e renderizador
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
-  const renderer = new THREE.WebGLRenderer();
-  renderer.setSize(window.innerWidth, 600); // altura fixa para não ocupar a tela toda
-  document.getElementById("orbit-simulation").appendChild(renderer.domElement);
-
-  // Dados orbitais do Filipemonteiro
-  const a = 2.99;   // semi-major axis (UA)
-  const e = 0.0445; // excentricidade
-  const b = a * Math.sqrt(1 - e*e); // semi-minor axis
-  const inclination = 11.53 * Math.PI / 180; // graus -> radianos
-
-  // Órbita como elipse
-  const curve = new THREE.EllipseCurve(0, 0, a, b);
-  const points = curve.getPoints(300);
-  const geometry = new THREE.BufferGeometry().setFromPoints(points);
-  const material = new THREE.LineBasicMaterial({ color: 0x0000ff });
-  const orbit = new THREE.Line(geometry, material);
-  orbit.rotation.x = inclination; // inclinação orbital
-  scene.add(orbit);
-
-  // Sol no centro
-  const sunGeometry = new THREE.SphereGeometry(0.2, 32, 32);
-  const sunMaterial = new THREE.MeshBasicMaterial({ color: 0xffff00 });
-  const sun = new THREE.Mesh(sunGeometry, sunMaterial);
-  scene.add(sun);
-
-  // Asteroide
-  const asteroidGeometry = new THREE.SphereGeometry(0.05, 16, 16);
-  const asteroidMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 });
-  const asteroid = new THREE.Mesh(asteroidGeometry, asteroidMaterial);
-  scene.add(asteroid);
-
-  // Planetas (posições aproximadas em UA, só para contexto visual)
-  function addPlanet(distance, color, size) {
-    const planetGeometry = new THREE.SphereGeometry(size, 32, 32);
-    const planetMaterial = new THREE.MeshBasicMaterial({ color: color });
-    const planet = new THREE.Mesh(planetGeometry, planetMaterial);
-    planet.position.x = distance;
-    scene.add(planet);
-    return planet;
-  }
-
-  const earth = addPlanet(1, 0x0000ff, 0.1);   // Terra ~1 UA
-  const mars = addPlanet(1.52, 0xff4500, 0.08); // Marte ~1.52 UA
-  const jupiter = addPlanet(5.2, 0xffd700, 0.3); // Júpiter ~5.2 UA
-
-  // Movimento do asteroide
-  let t = 0;
-  camera.position.z = 8;
-
-  function animate() {
-    requestAnimationFrame(animate);
-    t += 0.001;
-    if (t > 1) t = 0;
-    const pos = curve.getPoint(t);
-
-    // aplica inclinação na posição
-    asteroid.position.set(pos.x, pos.y * Math.cos(inclination), pos.y * Math.sin(inclination));
-
-    renderer.render(scene, camera);
-  }
-  animate();
-</script>
-
-
+<p>
+  <a href="https://www.spacereference.org/solar-system#ob=34586-filipemonteiro-2000-sk352" target="_blank">
+    View Orbit Simulation (SpaceReference)
+  </a>
+</p>
+    </section>
 
 <section id="gallery" class="hidden">
   <h2>Gallery</h2>
