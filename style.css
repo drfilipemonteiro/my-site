@@ -194,7 +194,7 @@ footer {
 }
 
 /* Container principal da seção do asteroide */
-#filipemonteiro-container {
+#Asteroidfilipemonteiro-container {
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 8px;
@@ -203,7 +203,7 @@ footer {
 }
 
 /* Título principal */
-#filipemonteiro-container h2 {
+#Asteroidfilipemonteiro-container h2 {
   color: #2c3e50;
   font-size: 28px;
   margin-bottom: 15px;
@@ -212,7 +212,7 @@ footer {
 }
 
 /* Subtítulos */
-#filipemonteiro-container h3 {
+#Asteroidfilipemonteiro-container h3 {
   color: #34495e;
   font-size: 20px;
   margin-top: 20px;
@@ -220,12 +220,12 @@ footer {
 }
 
 /* Listas */
-#filipemonteiro-container ul {
+#Asteroidfilipemonteiro-container ul {
   list-style-type: none;
   padding-left: 0;
 }
 
-#filipemonteiro-container ul li {
+#Asteroidfilipemonteiro-container ul li {
   background: #ecf0f1;
   margin: 5px 0;
   padding: 8px 12px;
@@ -233,22 +233,22 @@ footer {
   transition: background 0.3s;
 }
 
-#filipemonteiro-container ul li:hover {
+#Asteroidfilipemonteiro-container ul li:hover {
   background: #d0d7de;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-  #filipemonteiro-container {
+  #Asteroidfilipemonteiro-container {
     font-size: 14px;
     padding: 15px;
   }
 
-  #filipemonteiro-container h2 {
+  #Asteroidfilipemonteiro-container h2 {
     font-size: 22px;
   }
 
-  #filipemonteiro-container h3 {
+  #Asteroidfilipemonteiro-container h3 {
     font-size: 18px;
   }
 }
